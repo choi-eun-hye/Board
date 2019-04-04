@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--RecyclerView에 들어갈 게시판 하나의 목록-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1.5"
+        android:includeFontPadding="false"
+        android:text="TITLE"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:paddingTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txtcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1"
+        android:includeFontPadding="false"
+        android:text="content"
+        android:textSize="13sp"
+        android:textColor="@android:color/darker_gray"/>
+
+
+</LinearLayout>
