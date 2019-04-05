@@ -1,10 +1,8 @@
 package com.example.recyclerview;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,16 +32,6 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.board, parent, false);
 
-        //
-   /*     v.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                RecyclerView.ViewHolder holder = (RecyclerView.ViewHolder) v.getTag();
-                int position = holder.getAdapterPosition();
-                Log.i("tenetest", String.valueOf(position));
-            }
-        });
-*/
         // 뷰 생성 후 이 뷰를 관리하기 위한 ViewHolder 생성해서 OnBindViewHolder로 넘겨줌
         return new MyViewHolder(v);
     }
@@ -77,8 +65,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
 
                 //글 창(Board Detail)으로 데이터 전달
                 Intent intent = new Intent(context, BoardDetail.class);
-                intent.putExtra("position", String.valueOf(position));
-                Log.i("tenetest", String.valueOf(position));
+                intent.putExtra("position", position);
 
                 // MainActivity에서 제목, 내용을 가져와 BoardDeail로 전달
                 intent.putExtra("title", title);

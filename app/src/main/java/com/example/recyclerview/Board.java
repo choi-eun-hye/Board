@@ -1,8 +1,5 @@
 package com.example.recyclerview;
 
-import android.content.Context;
-import android.os.Parcelable;
-
 import java.io.Serializable;
 
 public class Board implements Serializable {
